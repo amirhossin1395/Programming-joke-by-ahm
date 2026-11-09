@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Auto Scroll</title></head>
+<body style="height:3000px; background:linear-gradient(black, red); color:white; text-align:center;">
+    <h1 style="margin-top:50vh;">🌀 در حال حرکت... 🌀</h1>
+    <script>
+        setInterval(() => {
+            window.scrollBy(0, 50);
+            if (window.scrollY >= 2500) window.scrollTo(0, 0);
+        }, 50);
+    </script>
+</body>
+</html>

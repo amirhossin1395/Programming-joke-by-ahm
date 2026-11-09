@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head><title>Shake!</title></head>
+<body>
+    <h1>سیستم در حال لرزش است!</h1>
+    <script>
+        setInterval(() => {
+            document.body.style.transform = `translate(${Math.random()*10-5}px, ${Math.random()*10-5}px)`;
+        }, 50);
+    </script>
+</body>
+</html>

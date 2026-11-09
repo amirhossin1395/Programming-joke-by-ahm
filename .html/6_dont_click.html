@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>DON'T CLICK</title></head>
+<body style="background:black; color:white; text-align:center; padding-top:20vh;">
+    <button id="btn" onclick="runAway()" style="padding:20px; font-size:20px;">کلیک نکن!</button>
+    <script>
+        function runAway() {
+            const btn = document.getElementById('btn');
+            btn.style.position = 'absolute';
+            btn.style.left = Math.random() * (window.innerWidth - 100) + 'px';
+            btn.style.top = Math.random() * (window.innerHeight - 50) + 'px';
+        }
+    </script>
+</body>
+</html>

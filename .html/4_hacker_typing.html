@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head><title>Typing...</title></head>
+<body style="background:black; color:#0f0; font-family:monospace; padding:20px;">
+    <div id="text"></div>
+    <script>
+        const lines = [
+            "root@device:~# hack -target=all",
+            "Connecting...",
+            "Access Granted.",
+            "Downloading files... 100%",
+            "SYSTEM COMPROMISED."
+        ];
+        let line = 0, char = 0;
+        function type() {
+            if (line < lines.length) {
+                if (char < lines[line].length) {
+                    document.getElementById('text').innerHTML += lines[line][char];
+                    char++;
+                    setTimeout(type, 50);
+                } else {
+                    document.getElementById('text').innerHTML += "<br>";
+                    line++; char = 0;
+                    setTimeout(type, 500);
+                }
+            }
+        }
+        type();
+    </script>
+</body>
+</html>
